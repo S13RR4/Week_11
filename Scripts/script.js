@@ -26,4 +26,15 @@ function bgPinkToggle () {
     document.body.classList.toggle('pink')
 }
 
-clickMeButton.addEventListener('click', bgPinkToggle);
+// clickMeButton.addEventListener('click', bgPinkToggle);
+
+function updateImage () {
+    const image = document.querySelector(".rotaryGif")
+    image.setAttribute('src', './images/rotary.gif')
+    image.setAttribute('height', '320')
+    image.setAttribute('width', '240')
+    image.setAttribute('alt', 'wankal rotary firing sequence gif')
+}
+clickMeButton.addEventListener('click', updateImage)
+
+// src="./images/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab.gif" height="320" width="240" alt=""
