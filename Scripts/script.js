@@ -28,13 +28,25 @@ function bgPinkToggle () {
 
 // clickMeButton.addEventListener('click', bgPinkToggle);
 
-function updateImage () {
+function updateImage (ev) {
     const image = document.querySelector(".rotaryGif")
     image.setAttribute('src', './images/rotary.gif')
     image.setAttribute('height', '320')
     image.setAttribute('width', '240')
     image.setAttribute('alt', 'wankal rotary firing sequence gif')
 }
-clickMeButton.addEventListener('click', updateImage)
+// clickMeButton.addEventListener('click', updateImage)
 
-// src="./images/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab.gif" height="320" width="240" alt=""
+const buttonContainer = document.querySelector('.button-container')
+function buttonsBgGreen(ev){
+    if (ev.target.tagName == 'BUTTON'){
+        ev.target.classList.add('bgGreenHover')
+    }
+}
+function buttonsBgWhite(ev) {
+    if (ev.target.tagName == 'BUTTON'){
+        ev.target.classList.remove('bgGreenHover')
+    }
+}
+buttonContainer.addEventListener('mouseover', buttonsBgGreen)
+buttonContainer.addEventListener('mouseout', buttonsBgWhite)
